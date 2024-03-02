@@ -9,14 +9,14 @@ public class SimpleCalculator {
     public SimpleCalculator(){
         this.intResult = 0;
     }
-
-
-
-
+//sasasa
 
     public double calculator(char operator, double num1, double num2) {
 
         if (operator == '+') {
+            if(num1<0){
+
+            }
             doubleResult = num1 + num2;
         }
 
@@ -25,11 +25,17 @@ public class SimpleCalculator {
             if (num1 > num2) {
                 doubleResult = num1 - num2;
             } else {
-                doubleResult = num2 - num1;
+                doubleResult = -num2 -(- num1);
             }
         }
         else if (operator == '*') {
-            doubleResult = num1 * num2;
+            if(num1<0 || num2<0){
+                doubleResult = -num1 * num2;
+            }
+            else {
+                doubleResult = num1 * num2;
+            }
+
         }
         else if (operator == '%') {
             doubleResult = num1 % num2;
