@@ -55,7 +55,7 @@ public class SimpleCalculator {
         return doubleResult;
     }
 
-
+////asasasasasas
 
     public double calculator(char operator, int num1, double num2) {
         if (operator == '+') {
