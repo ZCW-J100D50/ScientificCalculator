@@ -9,7 +9,7 @@ public class SimpleCalculator {
     public SimpleCalculator(){
         this.intResult = 0;
     }
-//sasasa
+
 
     public double calculator(char operator, double num1, double num2) {
 

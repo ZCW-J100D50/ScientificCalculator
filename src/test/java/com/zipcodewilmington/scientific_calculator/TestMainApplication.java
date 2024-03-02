@@ -5,29 +5,32 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-  //%%%%%%%%%%%%%%///
-/**
- * Created by leon on 2/9/18.
- */
+//Created By Alice Gonzalez
 public class TestMainApplication {
     SimpleCalculator simpleCalculator  = new SimpleCalculator();
+    @Test
+    public void Addition_Test(){
+        assertEquals(8.0,simpleCalculator.calculator('+',3.0,5.0),0.0001);
+    }
 
+    @Test
+    public void Multiplication_Test() {
+        assertEquals(42.0,simpleCalculator.calculator('*',7.0,6.0),0.0001);
+    }
 
-            @Test
-            public void test_Addition_Double_and_Double_Input(){
+    @Test
+    public void Division_Test() {
+        assertEquals(4.5,simpleCalculator.calculator('/',63.0,14.0),0.0001);
+    }
 
-        /** Checking addition! Checking double and double inputs*/
-        assertEquals(9.0,simpleCalculator.calculator('+',3.0,5.0),0.0001);
-
-            }
-
-
-            @Test
-            public void test_Subtraction_Double_and_Double_Input() {
-                /** Checking subtraction! Checking double and double inputs*/
-                assertEquals(9.0,simpleCalculator.calculator('-',3.0,5.0),0.0001);
-            }
-
+    @Test
+    public void Percentage_Test() {
+        assertEquals(7.0,simpleCalculator.calculator('-',9.0,2.0),0.0001);
+    }
+    @Test
+    public void Subtraction_Test() {
+        assertEquals(-7.0,simpleCalculator.calculator('-',7.0,14.0),0.0001);
+    }
 
 
 }

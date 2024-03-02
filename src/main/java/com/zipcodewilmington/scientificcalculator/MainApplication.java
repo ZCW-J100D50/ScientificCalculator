@@ -19,6 +19,5 @@ public class MainApplication {
         double dd = simpleCalculation.calculator('*',11,10);
 
         System.out.println("Result  = "+dd);
-
     }
 }
