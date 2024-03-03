@@ -26,8 +26,12 @@ public class Calculator {
         return this.currentValue;
     }
     public double divide(double num){
-        this.currentValue = currentValue / num;
+        if(num == 0){
+            Console.println("ERR");
+        }
+        else {this.currentValue = currentValue / num;}
         return this.currentValue;
+
     }
     public double squareRoot(){
         this.currentValue = Math.sqrt(this.currentValue);
@@ -49,4 +53,5 @@ public class Calculator {
         this.currentValue = -currentValue;
         return this.currentValue;
     }
+
 }
