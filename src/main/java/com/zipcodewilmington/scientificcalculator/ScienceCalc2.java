@@ -47,10 +47,6 @@ public class ScienceCalc2 {
         return fact;
     }
 
-    public int memory(int input) {
-
-    }
-
     public void calculator2() {
 
         Scanner scanner = new Scanner(System.in);
@@ -60,6 +56,7 @@ public class ScienceCalc2 {
         System.out.println("2. Degrees");
         System.out.println("3. Go Back");
         System.out.println("4. Factorial");
+        System.out.println("5. Memory");
 
         int choice = scanner.nextInt();
 
@@ -189,6 +186,9 @@ public class ScienceCalc2 {
                 System.out.println(factorial(input));
                 calculator2();
                 break;
+
+            case 5:
+
 
         }
     }
