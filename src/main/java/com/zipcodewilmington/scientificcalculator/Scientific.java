@@ -2,15 +2,20 @@ package com.zipcodewilmington.scientificcalculator;
 import java.lang.String;
 import java.util.Scanner;
 
+import static java.lang.Math.*;
+
 public class Scientific {
         private int value;
         private String con;
 
         private double save;
 
+        private double currentVal;
+
         public Scientific() {
                 this.value = 0;
                 this.con = "";
+                this.currentVal = currentVal;
 
 
         }
@@ -63,8 +68,39 @@ public class Scientific {
                 return this.con;
         }
 
-        public void Madd(){
+        public double getSine(){
+                this.currentVal = sin(this.currentVal);
+                return this.currentVal;
 
+        }
+
+        public double getCosine(){
+                this.currentVal = cos(this.currentVal);
+                return this.currentVal;
+
+        }
+
+        public double getTangent(){
+                this.currentVal = tan(this.currentVal);
+                return this.currentVal;
+
+        }
+
+        public double getInsine(){
+                this.currentVal = asin(this.currentVal);
+                return this.currentVal;
+
+        }
+
+        public double getIncosine(){
+                this.currentVal = acos(this.currentVal);
+                return this.currentVal;
+
+        }
+
+        public double getIntangent(){
+                this.currentVal = atan(this.currentVal);
+                return this.currentVal;
 
         }
 }

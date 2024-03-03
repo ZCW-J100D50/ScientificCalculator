@@ -44,7 +44,7 @@ public class MainApplication {
             Console.println("9.) Exponential");
             Console.println("10.) Inverse");
             Console.println("11.) Invert Signs");
-            Console.println("12.) Switch Display");
+            Console.println("12.) Scientific Calc");
 
 
 
@@ -81,11 +81,7 @@ public class MainApplication {
                 case 6:
                     // for division
                     double number3 = Console.getDoubleInput("Enter a value to divide: ");
-                    if(number3 == 0){
-                        stringInput = Console.getStringInput("ERROR!: enter 1 to clear");
-
-                    }else{
-                    calculator.divide(number3);}
+                    calculator.divide(number3);
                     break;
                 case 7:
                     // to find square of a number
@@ -112,39 +108,76 @@ public class MainApplication {
                     break;
 
                 case 12:
-                    stringInput = Console.getStringInput("Sci" );
-                            switch(stringInput){
-                                case "Display":
-                            }
+                    while (true) {
+                        stringInput = Console.getStringInput("Sci");
+                        switch (stringInput) {
+                            case "Display":
+                                stringInput = Console.getStringInput("To change display type enter: \"Bin\", \"Oct\", \"Dec\", or \"Hex\"");
 
-                    stringInput = Console.getStringInput("To change display type enter: \"Bin\", \"Oct\", \"Dec\", or \"Hex\"");
+                                switch (stringInput) {
+                                    case "Bin":
+                                        //binary conversion here
+                                        int num1 = Console.getIntegerInput("Enter a value of exponent: ");
+                                        System.out.println(scientific.binCon(num1));
+                                        break;
 
-                    switch (stringInput) {
-                        case "Bin":
-                            //binary conversion here
-                           int num1 = Console.getIntegerInput("Enter a value of exponent: ");
-                            System.out.println(scientific.binCon(num1));
-                            break;
+                                    case "Oct":
+                                        //octal conversion
+                                        int num2 = Console.getIntegerInput("Enter a value of exponent: ");
+                                        System.out.println(scientific.octCon(num2));
+                                        break;
 
-                        case "Oct":
-                            //octal conversion
-                            int num2 = Console.getIntegerInput("Enter a value of exponent: ");
-                            System.out.println(scientific.octCon(num2));
-                            break;
+                                    case "Dec":
+                                        //decimal conversion
+                                        int num3 = Console.getIntegerInput("Enter a value of exponent: ");
+                                        System.out.println(scientific.decCon(num3));
+                                        break;
 
-                        case "Dec":
-                            //decimal conversion
-                            int num3 = Console.getIntegerInput("Enter a value of exponent: ");
-                            System.out.println(scientific.decCon(num3));
-                            break;
+                                    case "Hex":
+                                        // hexadecimal conversion
+                                        int num4 = Console.getIntegerInput("Enter a value of exponent: ");
+                                        System.out.println(scientific.hexCon());
+                                        break;
+                                    default:
+                                        Console.println("Invalid entry try again");
+                                }
+                            case "Trig":
+                                stringInput = Console.getStringInput("Please select from the following options: ");
+                                switch (stringInput) {
+                                    case "sin":
+                                        scientific.getSine();
+                                        break;
 
-                        case "Hex":
-                            // hexadecimal conversion
-                            int num4 = Console.getIntegerInput("Enter a value of exponent: ");
-                            System.out.println(scientific.hexCon());
-                            break;
-                        default:
-                            Console.println("Invalid entry try again");
+                                    case "cos":
+                                        scientific.getCosine();
+                                        break;
+
+                                    case "tan":
+                                        scientific.getTangent();
+
+                                        break;
+
+                                    case "asin":
+                                        scientific.getInsine();
+
+                                        break;
+
+                                    case "acos":
+                                        scientific.getIncosine();
+
+                                        break;
+
+                                    case "atan":
+                                        scientific.getIntangent();
+
+                                        break;
+
+                                    default:
+                                        Console.println("Invalid entry try again");
+                                }
+
+
+                        }
                     }
                 case 13:
                     //save to memory
