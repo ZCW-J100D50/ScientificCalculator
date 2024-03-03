@@ -109,39 +109,53 @@ public class MainApplication {
 
                 case 12:
                     while (true) {
-                        stringInput = Console.getStringInput("Sci");
-                        switch (stringInput) {
-                            case "Display":
-                                stringInput = Console.getStringInput("To change display type enter: \"Bin\", \"Oct\", \"Dec\", or \"Hex\"");
+                        Console.println("1.) Display");
+                        Console.println("2.) Trig");
+                        Console.println("3.) Exit");
 
-                                switch (stringInput) {
-                                    case "Bin":
+                        userInput = Console.getIntegerInput("select option");
+                        switch (userInput) {
+                            case 1:
+                            while(true){
+                                Console.println("1.) Binary");
+                                Console.println("2.) Octal");
+                                Console.println("3.) Decimal");
+                                Console.println("4.) Hexadecimal");
+                                Console.println("5.) Exit");
+
+                                userInput = Console.getIntegerInput("select option");
+                                switch (userInput) {
+                                    case 1:
                                         //binary conversion here
                                         int num1 = Console.getIntegerInput("Enter a value of exponent: ");
                                         System.out.println(scientific.binCon(num1));
                                         break;
 
-                                    case "Oct":
+                                    case 2:
                                         //octal conversion
                                         int num2 = Console.getIntegerInput("Enter a value of exponent: ");
                                         System.out.println(scientific.octCon(num2));
                                         break;
 
-                                    case "Dec":
+                                    case 3:
                                         //decimal conversion
                                         int num3 = Console.getIntegerInput("Enter a value of exponent: ");
                                         System.out.println(scientific.decCon(num3));
                                         break;
 
-                                    case "Hex":
+                                    case 4:
                                         // hexadecimal conversion
                                         int num4 = Console.getIntegerInput("Enter a value of exponent: ");
-                                        System.out.println(scientific.hexCon());
+                                        System.out.println(scientific.hexCon(num4));
                                         break;
+
+                                    case 5:
+                                        System.exit(0);
                                     default:
                                         Console.println("Invalid entry try again");
                                 }
-                            case "Trig":
+                                }
+                            case 2:
                                 stringInput = Console.getStringInput("Please select from the following options: ");
                                 switch (stringInput) {
                                     case "sin":
@@ -176,7 +190,12 @@ public class MainApplication {
                                         Console.println("Invalid entry try again");
                                 }
 
+                            case 3:
+                                System.exit(0);
+                                break;
 
+                            default:
+                                Console.println("Invalid entry try again");
                         }
                     }
                 case 13:

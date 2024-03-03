@@ -5,7 +5,6 @@ import java.util.Scanner;
 import static java.lang.Math.*;
 
 public class Scientific {
-        private int value;
         private String con;
 
         private double save;
@@ -13,14 +12,13 @@ public class Scientific {
         private double currentVal;
 
         public Scientific() {
-                this.value = 0;
                 this.con = "";
                 this.currentVal = currentVal;
 
 
         }
 
-        public double getA() {
+        public double getSave() {
                 return save;
         }
 
@@ -28,13 +26,7 @@ public class Scientific {
 
         }
 
-        public int getValue() {
-                return value;
-        }
 
-        public void setValue(int value) {
-                this.value = value;
-        }
 
         public String getCon (){
                 return con;
@@ -61,9 +53,9 @@ public class Scientific {
                 return this.con;
         }
 
-        public String hexCon() {
+        public String hexCon(int num3) {
 
-                this.con = Integer.toHexString(this.value);
+                this.con = Integer.toHexString(num3);
 
                 return this.con;
         }
