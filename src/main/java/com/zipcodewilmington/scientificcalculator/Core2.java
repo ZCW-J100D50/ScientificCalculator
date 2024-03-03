@@ -65,6 +65,7 @@ public class Core2 {
 
         if (choice == 11){
             System.out.println("Powering Off Bye Bye");
+            System.exit(0);
         }
 
         switch (choice) {
