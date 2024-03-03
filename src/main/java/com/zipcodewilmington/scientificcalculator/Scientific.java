@@ -169,10 +169,14 @@ public class Scientific {
     }
 
     public void switchUnitsMode()
-    {} //Not coded yet
+    {
+
+    } //Not coded yet
 
     public void switchUnitsMode(String mode)
-    {} // Not coded yet
+    {
+
+    } // Not coded yet
 
 
 }
