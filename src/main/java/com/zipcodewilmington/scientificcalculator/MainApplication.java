@@ -47,7 +47,7 @@ public class MainApplication {
                     break;
                 case 2:
                     // Change current value
-                    doublegi newValue = Console.getDoubleInput("Please enter new value: ");
+                    double newValue = Console.getDoubleInput("Please enter new value: ");
                     calculator.setCurrentValue(newValue);
                     break;
                 case 3:
