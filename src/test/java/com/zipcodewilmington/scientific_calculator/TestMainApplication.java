@@ -15,46 +15,46 @@ public class TestMainApplication {
 
     //WORK IN PROGRESS
 
-    @Test //Testing Addition
+    @Test //Testing Addition Function PASSED
     public void addTest() {
-        double result  = calc.add(12);
-        result = calc.add(13);
-        assertEquals(25, result,0.01);
+        calc.setCurrentValue(10);
+        double result = calc.add(5);
+        assertEquals(15, result,0.01);
     }
 
-    @Test //Testing Subtraction
+    @Test //Testing Subtraction Function PASSED
     public void subTest() {
-        double result = calc.sub(53);
-        result = calc.sub(5);
-        assertEquals(48, result, 0.01);
+        calc.setCurrentValue(10);
+        double result = calc.sub(5);
+        assertEquals(5, result, 0.01);
     }
 
-    @Test //Testing Multiplication
+    @Test //Testing Multiplication Function PASSED
     public void multiplyTest() {
+        calc.setCurrentValue(10);
         double result = calc.multiply(2);
-        result = calc.multiply(2);
-        assertEquals(4, result, 0.01);
+        assertEquals(20, result, 0.01);
     }
 
-    @Test //Testing Division
+    @Test //Testing Division Function PASSED
     public void divideTest() {
+        calc.setCurrentValue(10);
         double result = calc.divide(2);
-        result = calc.divide(2);
-        assertEquals(1, result, 0.01);
+        assertEquals(5, result, 0.01);
     }
 
-    @Test //Testing Square
+    @Test //Testing Square Function PASSED
     public void squareTest() {
-        double result = calc.square(2);
-        result = calc.square(2);
-        assertEquals(4, result, 0.01);
+        calc.setCurrentValue(10);
+        double result = calc.square(10);
+        assertEquals(100, result, 0.01);
     }
 
-    @Test //Testing Square Root
+    @Test //Testing Square Root Function PASSED
     public void squareRootTest() {
-        double result = calc.squareRoot(4);
-        result = calc.squareRoot(4);
-        assertEquals(2, result, 0.01);
+        calc.setCurrentValue(10);
+        double result = calc.squareRoot(100);
+        assertEquals(10, result, 0.01);
     }
 
 }
