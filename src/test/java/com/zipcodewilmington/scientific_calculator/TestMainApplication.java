@@ -13,6 +13,8 @@ import static org.junit.Assert.assertEquals;
 public class TestMainApplication {
     Calculator calc = new Calculator();
 
+    //WORK IN PROGRESS
+    
     @Test //Testing Addition
     public void addTest() {
         double result  = calc.add(12);
@@ -54,10 +56,6 @@ public class TestMainApplication {
         result = calc.squareRoot(4);
         assertEquals(2, result, 0.01);
     }
-
-
-
-
 
 
 }
