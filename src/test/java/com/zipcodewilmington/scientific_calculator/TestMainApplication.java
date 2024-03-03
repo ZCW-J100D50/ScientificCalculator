@@ -32,5 +32,4 @@ public class TestMainApplication {
         assertEquals(-7.0,simpleCalculator.calculator('-',7.0,14.0),0.0001);
     }
 
-
 }
