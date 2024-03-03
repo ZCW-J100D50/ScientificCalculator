@@ -43,6 +43,7 @@ public class ScienceCalc2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Select Trigonometric Function");
         System.out.println("1. sin(x) 2. cos(x) 3. tan(x)");
+        System.out.println("4. asin")
         int userInput = scanner.nextInt();
         int userInput2 = scanner.nextInt();
 
