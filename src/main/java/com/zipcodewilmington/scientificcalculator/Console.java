@@ -27,11 +27,7 @@ public class Console {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextDouble();
     }
-/*    public static Integer getIntegerInput(String prompt)
-    {
-        return null;
-    }
- */
+
 
 
 }
