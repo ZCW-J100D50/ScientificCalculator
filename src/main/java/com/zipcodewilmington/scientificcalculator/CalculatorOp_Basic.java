@@ -2,9 +2,9 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class CalculatorOp_Basic
 {
-    public Double addition(double writeDouble, double userInput2)
+    public Double addition(double userInput, double userInput2)
    {
-        return writeDouble + userInput2;
+        return userInput + userInput2;
     }
     public Double subtraction(double userInput, double userInput2)
     {
