@@ -1,64 +1,195 @@
 package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
+import java.util.Arrays;
 public class ScienceCalc2 {
 
-    public double sine(double userInput2) {
-        return Math.sin(userInput2);
+    public double sine(double input) {
+        return Math.sin(input);
     }
-    public double cosine(double userInput) {
-        return Math.cos(userInput);
+    public double cosine(double input) {
+        return Math.cos(input);
     }
-    public double tangent(double userInput) {
-        return Math.tan(userInput);
+    public double tangent(double input) {
+        return Math.tan(input);
     }
-    public double sineD(double userInput) {
-        return Math.sin(Math.toRadians(userInput));
+    public double sineD(double input) {
+        return Math.sin(Math.toRadians(input));
     }
-    public double cosD(double userInput) {
-        return Math.cos(Math.toRadians(userInput));
+    public double cosD(double input) {
+        return Math.cos(Math.toRadians(input));
     }
-    public double tanD(double userInput) {
-        return Math.tan(Math.toRadians(userInput));
+    public double tanD(double input) {
+        return Math.tan(Math.toRadians(input));
     }
-    public double asin(double userInput) {
-        return Math.asin(userInput);
+    public double asin(double input) {
+        return Math.asin(input);
     }
-    public double acos(double userInput) {
-        return Math.acos(userInput);
+    public double acos(double input) {
+        return Math.acos(input);
     }
-    public double atan(double userInput) {
-        return Math.atan(userInput);
+    public double atan(double input) {
+        return Math.atan(input);
     }
-    public double asinD(double userInput) {
-        return Math.asin(Math.toRadians(userInput));
+    public double asinD(double input) {
+        return Math.asin(Math.toRadians(input));
     }
-    public double acosD(double userInput) {
-        return Math.acos(Math.toRadians(userInput));
+    public double acosD(double input) {
+        return Math.acos(Math.toRadians(input));
     }
-    public double atanD(double userInput) {
-        return Math.atan(Math.toRadians(userInput));
+    public double atanD(double input) {
+        return Math.atan(Math.toRadians(input));
+    }
+    public long factorial(int n) {
+        long fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
+
+    public int memory(int input) {
+
     }
 
     public void calculator2() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Select Trigonometric Function");
-        System.out.println("1. sin(x) 2. cos(x) 3. tan(x)");
-        System.out.println("4. asin")
-        int userInput = scanner.nextInt();
-        int userInput2 = scanner.nextInt();
 
-        switch (userInput) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Select Trigonometric Units Mode");
+        System.out.println("1. Radians");
+        System.out.println("2. Degrees");
+        System.out.println("3. Go Back");
+        System.out.println("4. Factorial");
+
+        int choice = scanner.nextInt();
+
+        switch (choice) {
             case 1:
-                sine(userInput2);
-                break;
+                System.out.println("You've selected Radians");
+                System.out.println("Please select Trigonometric Function");
+                System.out.println("1. sin(x) 2. cos(x) 3. tan(x)");
+                System.out.println("4. arcsin(x) 5. arccos(x) 6. arctan(x)");
+
+                int input1 = scanner.nextInt();
+
+                switch (input1) {
+                    case 1:
+                        System.out.println("Please enter your value");
+                        System.out.println("sin(x)");
+                        double input2 = scanner.nextDouble();
+                        System.out.println(sine(input2));
+                        calculator2();
+                        break;
+                    case 2:
+                        System.out.println("Please enter your value");
+                        System.out.println("cos(x)");
+                        double input3 = scanner.nextDouble();
+                        System.out.println(cosine(input3));
+                        calculator2();
+                        break;
+                    case 3:
+                        System.out.println("Please enter your value");
+                        System.out.println("tan(x)");
+                        double input4 = scanner.nextDouble();
+                        System.out.println(tangent(input4));
+                        calculator2();
+                        break;
+                    case 4:
+                        System.out.println("Please enter your value");
+                        System.out.println("arcsin(x)");
+                        double input5 = scanner.nextDouble();
+                        System.out.println(asin(input5));
+                        calculator2();
+                        break;
+                    case 5:
+                        System.out.println("Please enter your value");
+                        System.out.println("arccos(x)");
+                        double input6 = scanner.nextDouble();
+                        System.out.println(acos(input6));
+                        calculator2();
+                        break;
+                    case 6:
+                        System.out.println("Please enter your value");
+                        System.out.println("arctan(x)");
+                        double input7 = scanner.nextDouble();
+                        System.out.println(atan(input7));
+                        calculator2();
+                        break;
+                    default:
+                        System.out.println("Error");
+                        calculator2();
+                        break;
+                }
+
             case 2:
-                cosine(userInput2);
-                break;
+                System.out.println("You've selected Degrees");
+                System.out.println("Please select Trigonometric Function");
+                System.out.println("1. sin(x) 2. cos(x) 3. tan(x)");
+                System.out.println("4. arcsin(x) 5. arccos(x) 6. arctan(x)");
+
+                int input2 = scanner.nextInt();
+
+                switch (input2) {
+                    case 1:
+                        System.out.println("Please enter your value");
+                        System.out.println("sin(x)");
+                        double input3 = scanner.nextDouble();
+                        System.out.println(sineD(input3));
+                        calculator2();
+                        break;
+                    case 2:
+                        System.out.println("Please enter your value");
+                        System.out.println("cos(x)");
+                        double input4 = scanner.nextDouble();
+                        System.out.println(cosD(input4));
+                        calculator2();
+                        break;
+                    case 3:
+                        System.out.println("Please enter your value");
+                        System.out.println("tan(x)");
+                        double input5 = scanner.nextDouble();
+                        System.out.println(tanD(input5));
+                        calculator2();
+                        break;
+                    case 4:
+                        System.out.println("Please enter your value");
+                        System.out.println("arcsin(x)");
+                        double input6 = scanner.nextDouble();
+                        System.out.println(asinD(input6));
+                        calculator2();
+                        break;
+                    case 5:
+                        System.out.println("Please enter your value");
+                        System.out.println("arccos(x)");
+                        double input7 = scanner.nextDouble();
+                        System.out.println(acosD(input7));
+                        calculator2();
+                        break;
+                    case 6:
+                        System.out.println("Please enter your value");
+                        System.out.println("arctan(x)");
+                        double input8 = scanner.nextDouble();
+                        System.out.println(atanD(input8));
+                        calculator2();
+                        break;
+                    default:
+                        System.out.println("Error");
+                        calculator2();
+                        break;
+                }
+
             case 3:
-                tangent(userInput2);
+                calculator2();
                 break;
-            default:
-                System.out.println("Error");
+
+            case 4:
+                System.out.println("You've selected Factorial");
+                System.out.println("Please enter your value");
+                int input = scanner.nextInt();
+                System.out.println(factorial(input));
+                calculator2();
+                break;
+
         }
     }
 
