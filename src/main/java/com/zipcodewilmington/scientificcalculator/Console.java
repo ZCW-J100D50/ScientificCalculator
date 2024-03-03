@@ -1,5 +1,7 @@
+
 package com.zipcodewilmington.scientificcalculator;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -18,15 +20,22 @@ public class Console {
     public static String getStringInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        String userInput = scanner.nextLine();
-        return userInput;
+        String stringInput = scanner.nextLine();
+        return stringInput;
     }
 
     public static Integer getIntegerInput(String prompt) {
-        return null;
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        int userInput = scanner.nextInt();
+        return userInput;
     }
 
     public static Double getDoubleInput(String prompt) {
-        return null;
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        Double userInput = scanner.nextDouble();
+        return userInput;
+
     }
 }
