@@ -11,6 +11,9 @@ public class Core {
         this.result = 0;
     }
 
+    public  double getResult(){
+        return result;
+
     // getters and setters for the scientific class to use because its our instance variables are private
 
     }
