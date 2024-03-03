@@ -148,6 +148,9 @@ public class Core2 {
                 System.out.println(random);
                 calculator();
                 break;
+            default:
+                System.out.println("Invalid choice");
+                calculator();
 
 
 
