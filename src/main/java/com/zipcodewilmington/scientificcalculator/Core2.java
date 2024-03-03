@@ -165,22 +165,10 @@ public class Core2 {
  }
 
  public void mainMenu() {
-     System.out.println("Team Archimedes's Calculator");
-     System.out.println();
-     System.out.println("Please select which calculator to use");
-     System.out.println();
-     System.out.println();
-     System.out.println();
-     System.out.println("1. Basic Calculator");
-     System.out.println();
-     System.out.println();
-     System.out.println();
+     System.out.println("Team Archimedes's Calculator \n");
+     System.out.println("Please select which calculator to use \n \n \n");
+     System.out.println("1. Basic Calculator \n \n \n");
      System.out.println("2. Scientific Calculator \n \n \n ");
-//     System.out.println();
-//     System.out.println();
-//     System.out.println();
-//     System.out.println();
-//     System.out.println();
      System.out.println("9. POWER OFF");
 
 
