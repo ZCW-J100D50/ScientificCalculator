@@ -46,14 +46,35 @@ public class TestMainApplication {
     @Test //Testing Square Function PASSED
     public void squareTest() {
         calc.setCurrentValue(10);
-        double result = calc.square(10);
+        double result = calc.square();
         assertEquals(100, result, 0.01);
     }
 
     @Test //Testing Square Root Function PASSED
     public void squareRootTest() {
+        calc.setCurrentValue(100);
+        double result = calc.squareRoot();
+        assertEquals(10, result, 0.01);
+    }
+
+    @Test //Testing Exponential Function PASSED
+    public void exponentialTest() {
         calc.setCurrentValue(10);
-        double result = calc.squareRoot(100);
+        double result = calc.exponential(2);
+        assertEquals(100, result, 0.01);
+    }
+
+    @Test //Testing Inverse Function PASSED
+    public void inverseTest() {
+        calc.setCurrentValue(2);
+        double result = calc.inverse();
+        assertEquals(.5, result, 0.01);
+    }
+
+    @Test //Testing Invert Sign Function PASSED
+    public void invertSignTest() {
+        calc.setCurrentValue(-10);
+        double result = calc.invertSign();
         assertEquals(10, result, 0.01);
     }
 
