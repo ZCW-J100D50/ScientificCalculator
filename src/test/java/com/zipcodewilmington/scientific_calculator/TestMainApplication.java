@@ -82,18 +82,18 @@ public class TestMainApplication {
     @Test
     public void asinD(){
         ScienceCalc2 asinD = new ScienceCalc2();
-        assertEquals(.017454416230255062, asinD.asinD(1) ,0.0001);
+        assertEquals(30, asinD.asinD(.5) ,0.0001);
     }
     @Test
-    public void acos(){
-        ScienceCalc2 acos = new ScienceCalc2();
-        assertEquals(0,acos.acos(1) ,0.0001);
+    public void acosd(){
+        ScienceCalc2 acosD = new ScienceCalc2();
+        assertEquals(60,acosD.acosD(.5) ,0.0001);
     }
-//    @Test
-//    public void atan() {
-//        ScienceCalc2 atan = new ScienceCalc2();
-//        assertEquals(1.10714872, atan.atan(2) ,0.0001);
-//    }
+    @Test
+    public void atanD() {
+        ScienceCalc2 atanD = new ScienceCalc2();
+        assertEquals(63.43494882, atanD.atanD(2) ,0.0001);
+    }
 //    @Test
 ////    public void switchUnitModeRotate() {
 ////        ScienceCalc2 switchUnitModeRotate = new ScienceCalc2();

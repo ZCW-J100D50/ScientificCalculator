@@ -30,13 +30,13 @@ public class ScienceCalc2 {
         return Math.atan(userInput);
     }
     public double asinD(double userInput) {
-        return Math.asin(Math.toRadians(userInput));
+        return Math.toDegrees(Math.asin(userInput));
     }
     public double acosD(double userInput) {
-        return Math.acos(Math.toRadians(userInput));
+        return Math.toDegrees(Math.acos(userInput));
     }
     public double atanD(double userInput) {
-        return Math.atan(Math.toRadians(userInput));
+        return Math.toDegrees(Math.atan(userInput));
     }
 
     public void calculator2() {
