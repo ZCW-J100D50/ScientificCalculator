@@ -2,13 +2,16 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
 public class Core2 {
+    Scanner scanner = new Scanner(System.in);
 
 
     public double addition(double userInput, double userInput2) {
+
         return userInput + userInput2;
     }
 
     public double subtraction(double userInput, double userInput2) {
+
         return userInput - userInput2;
     }
 
@@ -17,6 +20,7 @@ public class Core2 {
     }
 
     public double division(double userInput, double userInput2) {
+
         return userInput / userInput2;
     }
 
@@ -41,9 +45,8 @@ public class Core2 {
     }
  public void calculator() {
 
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Team Archimedes calculator");
+        System.out.println("0");
         System.out.println("Please select an operator");
         System.out.println("1. +");
         System.out.println("2. -");
@@ -55,6 +58,7 @@ public class Core2 {
         System.out.println("8. Inverse");
         System.out.println("9. Invert");
         System.out.println("11. Power Off");
+        System.out.println("15. RNG");
 
         int choice = scanner.nextInt();
 
@@ -139,6 +143,12 @@ public class Core2 {
                 System.out.println(invert(input14));
                 calculator();
                 break;
+            case 15:
+                int random = (int) (Math.random() * 999999999);
+                System.out.println(random);
+                calculator();
+                break;
+
 
 
 
@@ -150,7 +160,59 @@ public class Core2 {
 
  }
 
+ public void mainMenu() {
+     System.out.println("Team Archimedes's Calculator");
+     System.out.println();
+     System.out.println("Please select which calculator to use");
+     System.out.println();
+     System.out.println();
+     System.out.println();
+     System.out.println("1. Basic Calculator");
+     System.out.println();
+     System.out.println();
+     System.out.println();
+     System.out.println("2. Scientific Calculator \n \n \n ");
+//     System.out.println();
+//     System.out.println();
+//     System.out.println();
+//     System.out.println();
+//     System.out.println();
+     System.out.println("9. POWER OFF");
 
+
+     int choice = scanner.nextInt();
+
+//     if (choice >= 3  &&  choice >= ) {
+//         System.out.println("Sorry Bro not an option please try again");
+//         mainMenu();
+//     }
+
+     switch (choice){
+         case 1:
+             calculator();
+         case 9:
+             System.out.println("Powering Off Bye Bye");
+             break;
+         default:
+             System.out.println("Invalid choice");
+             mainMenu();
+     }
+
+
+//     switch (choice) {
+//
+//         case 1:
+//             calculator();
+//             break;
+//         case 2:
+//             /*calculator2(); will be for scientific calculator/*
+//     }
+//
+//
+//
+// }
+
+ }
 
 
 
