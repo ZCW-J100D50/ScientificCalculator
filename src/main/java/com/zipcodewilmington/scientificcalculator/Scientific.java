@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Scientific {
 
     private String mode = "";
-    private double userInput = scannerMethod();  /// Not sure how to have a scanner obj for all methods yet
+    //private double userInput = scannerMethod();  /// Not sure how to have a scanner obj for all methods yet
 
     private double memory = 0; //Will store whatever value
     // To clear memory it will set the value to null or zero?? maybe
@@ -21,64 +21,9 @@ public class Scientific {
     *
     * */
 
-    public void selectOperationMenu()
-    {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\t---SCIENTIFIC OPERATIONS---\n");
-        System.out.println("--Select your choice by selecting number choice--");
-        System.out.println("\t1. TRIG FUNCTIONS");
-        System.out.println("\t2. CONVERSIONS");
-        System.out.println("\t3. LOGARITHMIC FUNCTIONS");
-        System.out.println("\t4. FACTORIAL FUNCTIONS");
-        System.out.println("\t5. EXIT SCIENTIFIC MODE");
 
-        int choice = scanner.nextInt();
-        runScientificCalc(choice);
 
-    }
-
-    private void runScientificCalc(int choice)
-    {
-        switch(choice){
-            case 1:
-                // Run trig switch or if else
-            case 2:
-                switchDisplayMode();
-            case 3:
-                runLogs();
-            case 4:
-                runFactorials();
-            case 5:
-                // I think the main has to have a main object and I can call the main.main()
-        }
-    }
-
-    private void runFactorials()
-    {
-    } // Not coded yet
-
-    private void runLogs()
-    {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("\t---SCIENTIFIC LOGARITHM OPERATIONS---\n");
-        System.out.println("--Select your choice by selecting number choice--");
-        System.out.println("\t1. Log");
-        System.out.println("\t2. Inverse Logarithm");
-        System.out.println("\t3. Natural Logarithm");
-        System.out.println("\t4. Inverse Natural Logarithm");
-
-        int choice = scanner.nextInt();
-        if(choice == 1){
-            System.out.println(logarithm(this.userInput));
-        }else if (choice == 2){
-            System.out.println(inverseLogarithm(this.userInput));
-        }else if (choice == 3){
-            System.out.println(naturalLogarithm(this.userInput));
-        }else if (choice == 4){
-            System.out.println(inverseNaturalLogarithm(this.userInput));
-        }
-    }
 
     public void switchDisplayMode()
     {
@@ -122,16 +67,16 @@ public class Scientific {
 
         if(inMode.equals("Binary"))
         {
-            convertToBinary();
+            //convertToBinary();
         } else if (inMode.equals("Octal"))
         {
-            convertToOctal();
+            //convertToOctal();
         } else if (inMode.equals("Hexadecimal"))
         {
-            convertToHexadecimal();
+            //convertToHexadecimal();
         } else if (inMode.equals("Decimal"))
         {
-            convertToDecimal();
+            //convertToDecimal();
         }
         scanner.close();
     } // I might need methods for all these so i can have proper inputs to get code to work
@@ -160,6 +105,7 @@ public class Scientific {
 
     public double sineValue(double userInput)
     {
+        userInput = Math.toRadians(userInput);
         return Math.sin(userInput);
     }
 
@@ -216,7 +162,7 @@ public class Scientific {
     public long factorial(int userInput)
     {
         long temp = 1;
-        for (int i = 2; i < userInput; i++){
+        for (int i = 2; i <= userInput; i++){
             temp *= i;
         }
         return temp;
@@ -228,13 +174,7 @@ public class Scientific {
     public void switchUnitsMode(String mode)
     {} // Not coded yet
 
-    public static double scannerMethod()
-    {
-        System.out.println("Enter a value: ");
-        Scanner scanner = new Scanner(System.in);
-        double value = scanner.nextDouble();
-        return value;
-    }
+
 }
 
 
