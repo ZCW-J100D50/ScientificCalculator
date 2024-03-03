@@ -154,11 +154,6 @@ public class Core2 {
                 calculator();
 
 
-
-
-
-
-
         }
 
 
@@ -193,22 +188,7 @@ public class Core2 {
      }
 
 
-//     switch (choice) {
-//
-//         case 1:
-//             calculator();
-//             break;
-//         case 2:
-//             /*calculator2(); will be for scientific calculator/*
-//     }
-//
-//
-//
-// }
-
  }
-
-
 
 }
 
