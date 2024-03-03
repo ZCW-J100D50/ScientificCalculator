@@ -5,35 +5,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by leon on 2/9/18.
  */
-public class TestMainApplication {
-//    @Test
-//    public void switchDisplayModeRotate(){
-//         ScienceCalc switchDisplayModeRotate = new ScienceCalc();
-//         assertEquals(4,switchDisplayModeRotate.);
-//    }
-//    @Test
-//    public void switchDisplayModeSet(){
-//        ScienceCalc switchDisplayModeSet = new ScienceCalc();
-//        assertEquals(4,switchDisplayModeSet.);
-//    }
-//    @Test
-//    public void mKey(){
-//        ScienceCalc mKey = new ScienceCalc();
-//        assertEquals(4,mKey.);
-//    }
-//    @Test
-//    public void mcKey(){
-//        ScienceCalc mcKey = new ScienceCalc();
-//        assertEquals(4,mcKey.);
-//    }
-//    @Test
-//    public void mrcKey(){
-//        ScienceCalc mrcKey = new ScienceCalc();
-//        assertEquals(4,mrcKey.);
-//    }
+public class TestMainApplicationScienceCalc2 {
+
     @Test
     public void sine() {
         ScienceCalc2 sine = new ScienceCalc2();
@@ -94,34 +72,10 @@ public class TestMainApplication {
         ScienceCalc2 atanD = new ScienceCalc2();
         assertEquals(63.43494882, atanD.atanD(2) ,0.0001);
     }
-//    @Test
-////    public void switchUnitModeRotate() {
-////        ScienceCalc2 switchUnitModeRotate = new ScienceCalc2();
-////        assertEquals(4, switchUnitModeRotate.);
-////    }
-//    @Test
-//    public void switchUnitModeSet() {
-//        ScienceCalc switchUnitModeSet = new ScienceCalc();
-//        assertEquals(4, switchUnitModeSet.);
-//    }
-//    @Test
-//    public void log() {
-//        ScienceCalc log = new ScienceCalc();
-//        assertEquals(4, log.);
-//    }
-//    @Test
-//    public void invLog() {
-//        ScienceCalc invLog = new ScienceCalc();
-//        assertEquals(4, invLog.);
-//    }
-//    @Test
-//    public void naturalLog() {
-//        ScienceCalc naturalLog = new ScienceCalc();
-//        assertEquals(4, naturalLog.);
-//    }
-//    @Test
-//    public void factorial() {
-//        ScienceCalc factorial = new ScienceCalc();
-//        assertEquals(4, factorial.);
-//    }
+
+    @Test
+    public void factorial() {
+        ScienceCalc2 factorial = new ScienceCalc2();
+        assertEquals(24, factorial.factorial(4));
+    }
 }
