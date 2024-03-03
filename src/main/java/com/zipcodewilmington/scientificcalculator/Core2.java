@@ -3,6 +3,7 @@ package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
 public class Core2 {
     Scanner scanner = new Scanner(System.in);
+    ScienceCalc2 scienceCalc2 = new ScienceCalc2();
 
 
     public double addition(double userInput, double userInput2) {
@@ -193,6 +194,8 @@ public class Core2 {
      switch (choice){
          case 1:
              calculator();
+         case 2:
+             scienceCalc2.calculator2();
          case 9:
              System.out.println("Powering Off Bye Bye");
              break;
