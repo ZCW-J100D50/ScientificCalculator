@@ -4,26 +4,9 @@ import java.util.Scanner;
 public class Scientific {
 
     private String mode = "";
-    //private double userInput = scannerMethod();  /// Not sure how to have a scanner obj for all methods yet
 
-    private double memory = 0; //Will store whatever value
+    // --Commented out by Inspection (3/3/24, 11:46 AM):private double memory = 0; //Will store whatever value
     // To clear memory it will set the value to null or zero?? maybe
-
-    /*
-    * MAYBE THE MAIN SHOULD HAVE A MENU SAYING DO YOU WANT TO DO ADDITION, SUBTRACTION ETC.
-    * OR PRESS 99 TO ENTER SCIENTIFIC MODE
-    *
-    * THEN HAVE A MENU THAT SAYS DO YOU WANT TO DO TRIG FUNCTIONS, CONVERSIONS, LOG FUNCTIONS ETC.
-    *
-    * MAKE SURE INSIDE THE TRIG FUNCTIONS MENU I SET UP THE **SWITCH TRIG UNITS MODE(DEGREES, RADIANS)**
-    *
-    * DON'T FORGET TO ADD **AT LEAST** TWO OF MY OWN FEATURES
-    *
-    * */
-
-
-
-
 
     public void switchDisplayMode()
     {
@@ -54,7 +37,6 @@ public class Scientific {
                 // Hexadecimal system: the value of each place is based on the powers of 16
         }
         System.out.println("Display Mode Switching To: " + mode);
-        scanner.close();
         switchDisplayMode(mode);
     }
 
@@ -65,21 +47,21 @@ public class Scientific {
         System.out.println("Enter an integer: ");
         int input = scanner.nextInt();
 
-        if(inMode.equals("Binary"))
-        {
-            //convertToBinary();
-        } else if (inMode.equals("Octal"))
-        {
-            //convertToOctal();
-        } else if (inMode.equals("Hexadecimal"))
-        {
-            //convertToHexadecimal();
-        } else if (inMode.equals("Decimal"))
-        {
-            //convertToDecimal();
+        switch (inMode) {
+            case "Binary":
+                System.out.println(convertToBinary(input));
+                break;
+            case "Octal":
+                System.out.println(convertToOctal(input));
+                break;
+            case "Hexadecimal":
+                System.out.println(convertToHexadecimal(input));
+                break;
+            case "Decimal":
+                System.out.println(convertToDecimal(input));
+                break;
         }
-        scanner.close();
-    } // I might need methods for all these so i can have proper inputs to get code to work
+    }
 
     /*******************************Scientific Features Follows************************************** */
 
@@ -142,12 +124,12 @@ public class Scientific {
     public double logarithm(double userInput)
     {
         return Math.log10(userInput);
-    } // TEST ALL LOG STUFF
+    }
 
     public double inverseLogarithm(double userInput)
     {
         return Math.pow(10,userInput);
-    } // TEST ALL LOG STUFF
+    }
 
     public double naturalLogarithm(double userInput)
     {
@@ -170,15 +152,61 @@ public class Scientific {
 
     public void switchUnitsMode()
     {
-
-    } //Not coded yet
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("1. Switch to Radians");
+        System.out.println("2. Switch to Degrees");
+        String choice = scanner.next();
+        switchUnitsMode(choice);
+    }
 
     public void switchUnitsMode(String mode)
     {
+        Scanner scanner = new Scanner(System.in);
+        if (mode.equals("1")) {
+            System.out.println("Enter in Radians: ");
+            double radians = scanner.nextDouble();
+            System.out.println("Radians: "+radians+"\tDegrees: "+Math.toDegrees(radians));
+        } else if (mode.equals("2")) {
+            System.out.println("Enter in Degrees: ");
+            double degrees = scanner.nextDouble();
+            System.out.println("Degrees: " + degrees + "\tRadians: " + Math.toRadians(degrees));
+        } else {
+            System.out.println("\n\nNot a valid choice. Follow directions!\n\n");
+        }
+    }
 
-    } // Not coded yet
+    public double getPi(int numOfPlaces)
+    {
+        double factor = Math.pow(10, numOfPlaces);
+        return Math.floor(Math.PI * factor) / factor;
 
+    }
 
+    public String randomNumbers(int choice)
+    {
+        double rand1 = Math.random();
+        double rand2 = Math.random();
+        // addition, sub, mult, divis
+        switch (choice){
+            case 1:
+                double total = rand1 + rand2;
+                return rand1 +" + "+rand2+" = "+total;
+            case 2:
+                double total2 = rand1 - rand2;
+                return rand1 +" - "+rand2+" = "+total2;
+            case 3:
+                double total3 = rand1 * rand2;
+                return rand1 +" * "+rand2+" = "+total3;
+            case 4:
+                double total4 = rand1 / rand2;
+                return rand1 +" / "+rand2+" = "+total4;
+            default:
+                return "** hmm not sure **";
+        }
+
+    }
+
+    // Yay coding!
 }
 
 

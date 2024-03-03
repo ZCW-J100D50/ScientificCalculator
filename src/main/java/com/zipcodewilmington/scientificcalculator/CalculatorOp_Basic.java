@@ -20,7 +20,7 @@ public class CalculatorOp_Basic
     }
     public Double square(double userInput)
     {
-        return userInput *= userInput;
+        return userInput * userInput;
     }
     public Double squareroot(double userInput)
     {
@@ -38,4 +38,5 @@ public class CalculatorOp_Basic
         return 1.0 / userInput;
     }
     public Double invertSign(double userInput){return -userInput;}
+
 }

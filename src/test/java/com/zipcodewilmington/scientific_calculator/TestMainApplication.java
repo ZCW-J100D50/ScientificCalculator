@@ -46,7 +46,6 @@ public class TestMainApplication {
     }
 
     //Test the method for division functionality
-
     @Test
     public void testDivision() {
         // Create a new instance of a ScientificCalculator
@@ -115,7 +114,6 @@ public class TestMainApplication {
         assertEquals("Binary conversion result is incorrect", "100", result);
     }
 
-
     // Test method for sine value calculation
     @Test
     public void testSineValue() {
@@ -126,7 +124,6 @@ public class TestMainApplication {
         // Verify that the sine value is as expected
         assertEquals("Sine value calculation is incorrect", 0.0, result, 0.001);
     }
-
 
     // Test method for logarithm calculation
     @Test
@@ -149,7 +146,6 @@ public class TestMainApplication {
         // Verify that the factorial result is as expected
         assertEquals("Factorial calculation is incorrect", 120, result);
     }
-
 
     // Test method for octal conversion
     @Test
@@ -227,11 +223,6 @@ public class TestMainApplication {
         // Verify that the inverse natural logarithm result (e^x) is as expected
         assertEquals("Inverse natural logarithm calculation is incorrect", Math.E, result, 0.001);
     }
-
-
-
-
-
 
 
 }
