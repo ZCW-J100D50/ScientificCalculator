@@ -13,13 +13,13 @@ public class ScienceCalc2 {
         return Math.tan(input);
     }
     public double sineD(double input) {
-        return Math.sin(Math.toRadians(input));
+        return Math.toDegrees(Math.sin(input));
     }
     public double cosD(double input) {
-        return Math.cos(Math.toRadians(input));
+        return Math.toDegrees(Math.cos(input));
     }
     public double tanD(double input) {
-        return Math.tan(Math.toRadians(input));
+        return Math.toDegrees(Math.tan(input));
     }
     public double asin(double input) {
         return Math.asin(input);
@@ -31,13 +31,13 @@ public class ScienceCalc2 {
         return Math.atan(input);
     }
     public double asinD(double input) {
-        return Math.asin(Math.toRadians(input));
+        return Math.toDegrees(Math.asin(input));
     }
     public double acosD(double input) {
-        return Math.acos(Math.toRadians(input));
+        return Math.toDegrees(Math.acos(input));
     }
     public double atanD(double input) {
-        return Math.atan(Math.toRadians(input));
+        return Math.toDegrees(Math.atan(input));
     }
     public long factorial(int n) {
         long fact = 1;
@@ -113,7 +113,7 @@ public class ScienceCalc2 {
                         calculator2();
                         break;
                     default:
-                        System.out.println("Error");
+                        System.out.println("Err");
                         calculator2();
                         break;
                 }
@@ -170,7 +170,7 @@ public class ScienceCalc2 {
                         calculator2();
                         break;
                     default:
-                        System.out.println("Error");
+                        System.out.println("Err");
                         calculator2();
                         break;
                 }
@@ -182,12 +182,15 @@ public class ScienceCalc2 {
             case 4:
                 System.out.println("You've selected Factorial");
                 System.out.println("Please enter your value");
-                int input = scanner.nextInt();
-                System.out.println(factorial(input));
+
+                int input3 = scanner.nextInt();
+
+                System.out.println(factorial(input3));
                 calculator2();
                 break;
 
-            case 5:
+
+
 
 
         }
