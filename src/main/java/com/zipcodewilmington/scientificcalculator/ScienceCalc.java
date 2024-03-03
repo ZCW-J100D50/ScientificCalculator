@@ -2,13 +2,19 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
 
-public class ScienceCalc {
+/*public class ScienceCalc {
     private double sine;
     private double cosine;
     private double tangent;
     private double sineDeg;
     private double cosineDeg;
     private double tangentDeg;
+    private double invSine;
+    private double invCosine;
+    private double invTangent;
+    private double invSineDeg;
+    private double invCosineDeg;
+    private double invTangentDeg;
 
     // Constructor to initialize variables at zero
     public ScienceCalc() {
@@ -18,6 +24,12 @@ public class ScienceCalc {
         this.sineDeg = 0;
         this.cosineDeg = 0;
         this.tangentDeg = 0;
+        this.invSine = 0;
+        this.invCosine = 0;
+        this.invTangent = 0;
+        this.invSineDeg = 0;
+        this.invCosineDeg = 0;
+        this.invTangentDeg = 0;
     }
 
     // Getters and setters to access my private instance variables
@@ -44,6 +56,31 @@ public class ScienceCalc {
     public double getTangentDeg() {
         return tangentDeg;
     }
+
+    public double getInvSine() {
+        return invSine;
+    }
+
+    public double getInvCosine() {
+        return invCosine;
+    }
+
+    public double getInvTangent() {
+        return invTangent;
+    }
+
+    public double getInvSineDeg() {
+        return invSineDeg;
+    }
+
+    public double getInvCosineDeg() {
+        return invCosineDeg;
+    }
+
+    public double getInvTangentDeg() {
+        return invTangentDeg;
+    }
+
 
     public void askOperator1(Scanner scanner) {
         // asking user for trig units mode
@@ -113,4 +150,8 @@ public class ScienceCalc {
             System.out.println("ERROR");
         }
     }
-}
+
+    public void trigFunctions(param) {
+
+    }
+}*/
