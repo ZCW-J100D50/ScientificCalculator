@@ -14,10 +14,7 @@ public class SimpleCalculator {
     public double calculator(char operator, double num1, double num2) {
 
         if (operator == '+') {
-            if(num1<0){
-
-            }
-            doubleResult = num1 + num2;
+                doubleResult = num1 + num2;
         }
 
 
@@ -42,13 +39,12 @@ public class SimpleCalculator {
         }
         else {
             try {
-                if (num1 > num2) {
+
                     doubleResult = num1 / num2;
-                } else {
-                    doubleResult = num2 / num1;
-                }
+
+
             } catch (ArithmeticException e) {
-                System.out.println("Exception handled " + e.getMessage());
+                System.out.println("Error " + e.getMessage());
             }
 
         }
@@ -74,11 +70,8 @@ public class SimpleCalculator {
             doubleResult = num1 * num2;
         } else {
             try {
-                if (num1 > num2) {
                     doubleResult = num1 / num2;
-                } else {
-                    doubleResult = num2 / num1;
-                }
+
             } catch (ArithmeticException e) {
                 System.out.println("Exception handled " + e.getMessage());
             }
@@ -100,15 +93,14 @@ public class SimpleCalculator {
             else {
                 doubleResult = num2 - num1;
             }
-        } else if (operator == '*') {
+        }
+        else if (operator == '*') {
             doubleResult = num1 * num2;
         } else {
             try {
-                if (num1 > num2) {
+
                     doubleResult = num1 / num2;
-                } else {
-                    doubleResult = num2 / num1;
-                }
+
             } catch (ArithmeticException e) {
                 System.out.println("Exception handled " + e.getMessage());
             }
@@ -136,7 +128,7 @@ public class SimpleCalculator {
                 doubleResult = num1 / num2;
             }
             catch (ArithmeticException e){
-                System.out.println("Exception handled "+e.getMessage());
+                System.out.println("Can't divide by zero");
             }
 
 
@@ -146,7 +138,7 @@ public class SimpleCalculator {
                 doubleResult = num2 / num1;
             }
             catch (ArithmeticException e){
-                System.out.println("Exception handled "+e.getMessage());
+                return Double.parseDouble("Error");
             }
         }
 

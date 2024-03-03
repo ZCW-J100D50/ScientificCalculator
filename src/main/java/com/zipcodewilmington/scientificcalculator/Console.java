@@ -27,15 +27,13 @@ public class Console {
         return userInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        System.out.println(prompt);
+    public static Integer getIntegerInput() {
         Scanner scan = new Scanner(System.in);
         int number = scan.nextInt();
         return number;
     }
 
-    public static Double getDoubleInput(String prompt) {
-        System.out.println(prompt);
+    public static Double getDoubleInput() {
         Scanner scan = new Scanner(System.in);
         double d = scan.nextDouble();
         return d;
