@@ -1,6 +1,5 @@
 package com.zipcodewilmington.scientificcalculator;
 
-import java.util.Scanner;
 /**
  * Created by leon on 2/9/18.
  */
@@ -30,9 +29,11 @@ public class MainApplication {
 ////        System.out.println("Multiplication: " + calculator.getMultiplication());
 ////        System.out.println("Division: " + calculator.getDivision());
 //        System.out.println(calculator.getResult());
-        Core2 c2 = new Core2();
+        new Core2().calculator();
 
-        System.out.println(c2.inverse(5));
+//        System.out.println(c2.inverse(5));
+
+
 
 
     }
