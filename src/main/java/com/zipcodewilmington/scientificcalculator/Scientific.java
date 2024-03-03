@@ -1,13 +1,26 @@
 package com.zipcodewilmington.scientificcalculator;
 import java.lang.String;
+import java.util.Scanner;
 
 public class Scientific {
         private int value;
         private String con;
 
+        private double save;
+
         public Scientific() {
                 this.value = 0;
                 this.con = "";
+
+
+        }
+
+        public double getA() {
+                return save;
+        }
+
+        public void setSave(double save) { this.save = save;
+
         }
 
         public int getValue() {
@@ -31,25 +44,28 @@ public class Scientific {
                 return this.con;
         }
 
-        public String octCon () {
+        public String octCon (int num1) {
 
-                this.con = Integer.toBinaryString(this.value);
+                this.con = Integer.toOctalString(num1);
 
                 return this.con;
         }
 
-        public String decCon() {
-
-                this.con = Integer.toOctalString(this.value);
+        public String decCon(int num2) {
 
                 return this.con;
         }
 
         public String hexCon() {
 
-                this.con = Integer.toBinaryString(this.value);
+                this.con = Integer.toHexString(this.value);
 
                 return this.con;
+        }
+
+        public void Madd(){
+
+
         }
 }
 

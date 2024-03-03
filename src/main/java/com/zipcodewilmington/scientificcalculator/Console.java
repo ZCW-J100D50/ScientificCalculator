@@ -37,5 +37,12 @@ public class Console {
         Double userInput = scanner.nextDouble();
         return userInput;
 
-    }
+   /* }
+   public static Double[] getArrayInput(String prompt){
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        Double userInput = scanner.nextDouble();
+        return userInput;*/
+
+   }
 }

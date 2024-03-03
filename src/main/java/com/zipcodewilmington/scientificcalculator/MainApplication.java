@@ -5,8 +5,7 @@ package com.zipcodewilmington.scientificcalculator;
  */
 
 
-
-
+import java.util.Scanner;
 
 /**
  * Created by leon on 2/9/18.
@@ -82,7 +81,11 @@ public class MainApplication {
                 case 6:
                     // for division
                     double number3 = Console.getDoubleInput("Enter a value to divide: ");
-                    calculator.divide(number3);
+                    if(number3 == 0){
+                        stringInput = Console.getStringInput("ERROR!: enter 1 to clear");
+
+                    }else{
+                    calculator.divide(number3);}
                     break;
                 case 7:
                     // to find square of a number
@@ -109,34 +112,48 @@ public class MainApplication {
                     break;
 
                 case 12:
+                    stringInput = Console.getStringInput("Sci" );
+                            switch(stringInput){
+                                case "Display":
+                            }
+
                     stringInput = Console.getStringInput("To change display type enter: \"Bin\", \"Oct\", \"Dec\", or \"Hex\"");
 
                     switch (stringInput) {
                         case "Bin":
                             //binary conversion here
                            int num1 = Console.getIntegerInput("Enter a value of exponent: ");
-                            scientific.binCon();
+                            System.out.println(scientific.binCon(num1));
                             break;
 
                         case "Oct":
                             //octal conversion
-                            scientific.octCon();
+                            int num2 = Console.getIntegerInput("Enter a value of exponent: ");
+                            System.out.println(scientific.octCon(num2));
                             break;
 
                         case "Dec":
                             //decimal conversion
-                            scientific.decCon();
+                            int num3 = Console.getIntegerInput("Enter a value of exponent: ");
+                            System.out.println(scientific.decCon(num3));
                             break;
 
                         case "Hex":
                             // hexadecimal conversion
-                            scientific.hexCon();
+                            int num4 = Console.getIntegerInput("Enter a value of exponent: ");
+                            System.out.println(scientific.hexCon());
+                            break;
                         default:
                             Console.println("Invalid entry try again");
-
-
                     }
                 case 13:
+                    //save to memory
+                    double file = Console.getDoubleInput("Enter a value to divide: ");
+                            scientific.setSave(file);
+                    break;
+
+
+                case 14:
                     // to exit
                     System.exit(0);
                 default:
