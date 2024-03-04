@@ -13,13 +13,13 @@ public class ScienceCalc2 {
         return Math.tan(input);
     }
     public double sineD(double input) {
-        return Math.toDegrees(Math.sin(input));
+        return Math.sin(Math.toRadians(input));
     }
     public double cosD(double input) {
-        return Math.toDegrees(Math.cos(input));
+        return Math.cos(Math.toRadians(input));
     }
     public double tanD(double input) {
-        return Math.toDegrees(Math.tan(input));
+        return Math.tan(Math.toRadians(input));
     }
     public double asin(double input) {
         return Math.asin(input);
@@ -189,10 +189,44 @@ public class ScienceCalc2 {
                 calculator2();
                 break;
 
+
+            case 5:
+                System.out.println("You are in Memory");
+                System.out.println("1. M+ 2. MC 3. MRC 4. Go Back");
+
+                int input4 = scanner.nextInt();
+
+                switch (input4) {
+                    case 1:
+                        int input9 = scanner.nextInt();
+
+                        int[] memory = new int[1];
+
+                        System.out.println(Arrays.toString(memory));
+
+                        for (int i = 0; i < memory.length; i++) {
+                            memory[i] = input9;
+                        }
+
+                        System.out.println(Arrays.toString(memory));
+                        calculator2();
+                        break;
+
+                    /*case 2:
+                        System.out.println(Arrays.toString(memory));
+                        System.out.println("Memory was reset");
+                        memory[1] = 0:
+                        System.out.println(Arrays.toString(memory));
+                        calculator2();
+                        break;*/
+
+                }
+
             default:
                 System.out.println("Input error");
                 calculator2();
                 break;
+
 
 
 
