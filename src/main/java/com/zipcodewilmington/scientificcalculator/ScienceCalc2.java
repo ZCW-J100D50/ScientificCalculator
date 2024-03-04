@@ -48,6 +48,7 @@ public class ScienceCalc2 {
     }
 
     public void calculator2() {
+        Core2 core2 = new Core2();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -56,7 +57,6 @@ public class ScienceCalc2 {
         System.out.println("2. Degrees");
         System.out.println("3. Go Back");
         System.out.println("4. Factorial");
-        System.out.println("5. Memory");
 
         int choice = scanner.nextInt();
 
@@ -176,7 +176,7 @@ public class ScienceCalc2 {
                 }
 
             case 3:
-                calculator2();
+                core2.mainMenu();
                 break;
 
             case 4:
@@ -188,6 +188,7 @@ public class ScienceCalc2 {
                 System.out.println(factorial(input3));
                 calculator2();
                 break;
+
 
             case 5:
                 System.out.println("You are in Memory");
@@ -220,6 +221,12 @@ public class ScienceCalc2 {
                         break;*/
 
                 }
+
+            default:
+                System.out.println("Input error");
+                calculator2();
+                break;
+
 
 
 
