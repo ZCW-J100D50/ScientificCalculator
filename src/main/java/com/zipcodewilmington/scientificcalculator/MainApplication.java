@@ -26,8 +26,8 @@ public class MainApplication {
 //
 //        System.out.println("Result  = "+ScientificCalculator.cosine(d));
 
-StartCalculatorWithType.start();
-SimpleCalculator a = new SimpleCalculator();
+    StartCalculatorWithType.start();
+
 
 
 
