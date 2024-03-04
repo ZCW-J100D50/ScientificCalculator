@@ -30,6 +30,21 @@ public class LogarithmicFunctionsTest {
         double actual = log.calculateNaturalLog(value,base);
         assertEquals(expected, actual);
     }
-    
+
+    @Test
+    public void testFactorial() {
+        double value = 5;
+        double expected = 120;
+        double actual = log.factorial(value);
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testFactorialZero() {
+        double value = 0;
+        double expected = 1;
+        double actual = log.factorial(value);
+        assertEquals(expected, actual);
+    }
+
 }
 
