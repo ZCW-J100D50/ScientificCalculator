@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by leon on 2/9/18.
  */
-public class TestMainApplicationScienceCalc2 { //added comment
+public class TestMainApplicationScienceCalc2 { //added comment ali
 
     @Test
     public void sine() {
