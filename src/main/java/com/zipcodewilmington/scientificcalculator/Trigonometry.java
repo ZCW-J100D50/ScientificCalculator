@@ -3,32 +3,38 @@ package com.zipcodewilmington.scientificcalculator;
 public class Trigonometry {
 
     // calculate the sine of a given value then display it
-    public static double calculateSine(double value) {
-        return (Math.sin(Math.toRadians(value)));
+    public  double calculateSine(double value) {
+        double k = Math.sin(Math.toRadians(value));
+        return Math.round(k*100.0)/100.0;
     }
 
 // calculate the cosine of a given value then display it
-    public static double calculateCosine(double value) {
-        return Math.toRadians(value);
+    public  double calculateCosine(double value) {
+        double k = Math.cos(Math.toRadians(value));
+        return Math.round(k* 100.0) /100.0;
     }
 
 // calculate the tangent of a given value then display it
-    public static double calculateTangent( double value ) {
-        return Math.toRadians(value);
+    public double calculateTangent( double value ) {
+        double k =  Math.tan(Math.toRadians(value));
+        return Math.round(k* 100.0) /100.0;
     }
 
 // calculate the inverse sine of a given value then display it
-    public static double calculateInverseSine( double value ) {
-        return Math.asin(value);
+    public double calculateInverseSine( double value ) {
+        double k =  Math.asin(value);
+        return Math.round(k* 100.0) /100.0;
     }
 
 // calculate the inverse cosine of a given value then display it
-    public static double calculateInverseCosine( double value ) {
-        return Math.acos(value);
+    public double calculateInverseCosine( double value ) {
+        double k = Math.acos(value);
+        return Math.round(k* 100.0) /100.0;
     }
 
 // calculate the inverse tangent of a given value then display it
-    public static double calculateInverseTangent ( double value ) {
-        return Math.toDegrees(Math.atan(value));
+    public double calculateInverseTangent ( double value ) {
+        double k =  Math.atan(value);
+        return Math.round(k* 100.0) /100.0;
     }
 }

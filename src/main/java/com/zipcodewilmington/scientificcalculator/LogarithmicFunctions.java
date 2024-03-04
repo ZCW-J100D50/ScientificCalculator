@@ -2,22 +2,25 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class LogarithmicFunctions {
     // calculate the logarithmic	function of a given value then display it
-    public static double calculateLogarithmic( double value ) {
-        return Math.log(value);
+    public double calculateLogarithmic( double value ) {
+        double k = Math.log(value);
+        return Math.round(k* 100.0) /100.0;
     }
 
 // calculate the inverse logarithm of a given value then display it
-    public static double calculateInverseLogarithm( double value ) {
-        return Math.exp(value);
+    public  double calculateInverseLogarithm( double value ) {
+        double k = Math.exp(value);
+        return Math.round(k* 100.0) /100.0;
     }
 
 // calculate the natural logarithm of a given value then display it
-    public static double calculateNaturalLog( double value, double base ) {
-        return Math.log(value) / Math.log(base);
+    public  double calculateNaturalLog( double value, double base ) {
+        double k = Math.log((value) /(base));
+        return Math.round(k* 100.0) /100.0;
     }
 
 // calculate the inverse natural logarithm of a given value then display it
-    public static double calculateNaturalInverseLog( double value ) {
-        return Math.exp(value);
-    }
+//    public  double calculateNaturalInverseLog( double value ) {
+//        return Math.exp(value);
+//    }
 }
