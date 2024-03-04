@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class TestMainApplication {
     Calculator calc = new Calculator();
 
-    //WORK IN PROGRESS
+    //TESTING CORE CALCULATOR FEATURES BELOW
 
     @Test //Testing Core Addition Function PASSED
     public void addTest() {
@@ -78,12 +78,19 @@ public class TestMainApplication {
         assertEquals(10, result, 0.01);
     }
 
+
+
+
+
+    // TESTING SCIENTIFIC CALCULATOR FEATURES BELOW
+
     @Test //Testing Scientific Bin Con Function
     public void binConTest() {
         calc.setCurrentVal();
         int result = Integer.toBinaryString();
         assertEquals();
     }
+
 
     @Test //Testing Scientific Oc Con Function
     public void octConTest() {
@@ -149,10 +156,8 @@ public class TestMainApplication {
     }
 
 
+
     
-
-
-
 
 
 }
