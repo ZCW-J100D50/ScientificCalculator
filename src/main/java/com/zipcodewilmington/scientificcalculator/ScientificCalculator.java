@@ -112,6 +112,8 @@ public class ScientificCalculator {
                 case "19":
                     displayNum = 0;
                     break;
+                default :
+                    System.out.println("Invalid Selection.\n\n");
 
             }
         }
