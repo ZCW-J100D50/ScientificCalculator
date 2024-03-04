@@ -48,6 +48,7 @@ public class MainApplication {
 
 
 
+
             // other operations
             Console.println("13.) Exit");
 
@@ -111,7 +112,10 @@ public class MainApplication {
                     while (true) {
                         Console.println("1.) Display");
                         Console.println("2.) Trig");
-                        Console.println("3.) Exit");
+                        Console.println("3.) Memory");
+                        Console.println("4.) Display Trig)");
+                        Console.println("5.) Exit");
+
 
                         userInput = Console.getIntegerInput("select option");
                         switch (userInput) {
@@ -156,41 +160,114 @@ public class MainApplication {
                                 }
                                 }
                             case 2:
-                                stringInput = Console.getStringInput("Please select from the following options: ");
-                                switch (stringInput) {
-                                    case "sin":
-                                        scientific.getSine();
+                                while(true){
+                                    Console.println("1.) Sin");
+                                    Console.println("2.) Cos");
+                                    Console.println("3.) Tan");
+                                    Console.println("4.) Asin");
+                                    Console.println("5.) Acos");
+                                    Console.println("6.) Atan");
+                                    Console.println("7.) Exit");
+
+                                userInput = Console.getIntegerInput("Please select from the following options: ");
+                                switch (userInput) {
+                                    case 1:
+                                        int num = Console.getIntegerInput("Enter a value");
+                                        System.out.println(scientific.getSine(num));
                                         break;
 
-                                    case "cos":
-                                        scientific.getCosine();
-                                        break;
-
-                                    case "tan":
-                                        scientific.getTangent();
-
-                                        break;
-
-                                    case "asin":
-                                        scientific.getInsine();
-
-                                        break;
-
-                                    case "acos":
-                                        scientific.getIncosine();
+                                    case 2:
+                                        int num1 = Console.getIntegerInput("Enter a value");
+                                        System.out.println(scientific.getCosine(num1));
 
                                         break;
 
-                                    case "atan":
-                                        scientific.getIntangent();
+                                    case 3:
+                                        int num2 = Console.getIntegerInput("Enter a value");
+                                        System.out.println( scientific.getTangent(num2));
+
 
                                         break;
 
+                                    case 4:
+                                        int num3 = Console.getIntegerInput("Enter a value");
+                                        System.out.println(scientific.getInsine(num3));
+
+                                        break;
+
+                                    case 5:
+                                        int num4 = Console.getIntegerInput("Enter a value");
+                                        System.out.println(scientific.getIncosine(num4));
+
+
+
+                                        break;
+
+                                    case 6:
+                                        int num5 = Console.getIntegerInput("Enter a value");
+                                        System.out.println(scientific.getIntangent(num5));
+
+                                        break;
+                                    case 7:
+                                        System.exit(0);
+                                        break;
                                     default:
                                         Console.println("Invalid entry try again");
                                 }
+                                }
 
                             case 3:
+                                while (true) {
+                                    Console.println("1.) M+ (add to memory)");
+                                    Console.println("2.) print memory");
+                                    Console.println("3.) Exit");
+                                    userInput = Console.getIntegerInput("select option");
+
+                                    switch (userInput) {
+                                        case 1:
+                                            //save to memory
+                                            double file = Console.getDoubleInput("Enter number to save");
+                                            scientific.setSave(file);
+                                            break;
+                                        case 2:
+                                            //print memory
+                                            System.out.println(scientific.getSave());
+                                            break;
+
+                                        case 3:
+                                            System.exit(0);
+
+                                            break;
+
+                                        default:
+                                            Console.println("Invalid entry try again");
+
+                                    }
+                                }
+                            case 4:
+                                while(true){
+                                    Console.println("1.) Degrees");
+                                    Console.println("2.) Radians");
+
+                                    userInput = Console.getIntegerInput("select option");
+                                    switch (userInput){
+
+                                        case 1:
+                                        double num = Console.getDoubleInput("Enter a value");
+                                            System.out.println(scientific.degCon(num));
+
+                                            break;
+
+                                        case 2:
+
+                                            double num1 = Console.getDoubleInput("Enter a value");
+                                            System.out.println(scientific.radCon(num1));
+                                            break;
+
+                                    }
+
+                                }
+                            case 5:
                                 System.exit(0);
                                 break;
 
@@ -198,14 +275,8 @@ public class MainApplication {
                                 Console.println("Invalid entry try again");
                         }
                     }
+
                 case 13:
-                    //save to memory
-                    double file = Console.getDoubleInput("Enter a value to divide: ");
-                            scientific.setSave(file);
-                    break;
-
-
-                case 14:
                     // to exit
                     System.exit(0);
                 default:

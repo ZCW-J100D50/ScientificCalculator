@@ -22,10 +22,11 @@ public class Scientific {
                 return save;
         }
 
-        public void setSave(double save) { this.save = save;
+        public void setSave(double save) {
+
+                  this.save += save;
 
         }
-
 
 
         public String getCon (){
@@ -60,38 +61,54 @@ public class Scientific {
                 return this.con;
         }
 
-        public double getSine(){
-                this.currentVal = sin(this.currentVal);
+
+        public double degCon(double num) {
+
+                this.currentVal = toDegrees(num);
+
+                return this.currentVal;
+        }
+
+
+        public double radCon(double num) {
+
+                this.currentVal = toRadians(num);
+
+                return this.currentVal;
+        }
+
+        public double getSine(int num4){
+                this.currentVal = sin(num4);
                 return this.currentVal;
 
         }
 
-        public double getCosine(){
-                this.currentVal = cos(this.currentVal);
+        public double getCosine(int num5){
+                this.currentVal = cos(num5);
                 return this.currentVal;
 
         }
 
-        public double getTangent(){
-                this.currentVal = tan(this.currentVal);
+        public double getTangent(int num6){
+                this.currentVal = tan(num6);
                 return this.currentVal;
 
         }
 
-        public double getInsine(){
-                this.currentVal = asin(this.currentVal);
+        public double getInsine(int num7){
+                this.currentVal = asin(toRadians(num7));
                 return this.currentVal;
 
         }
 
-        public double getIncosine(){
-                this.currentVal = acos(this.currentVal);
+        public double getIncosine(int num8){
+                this.currentVal = acos(num8);
                 return this.currentVal;
 
         }
 
-        public double getIntangent(){
-                this.currentVal = atan(this.currentVal);
+        public double getIntangent(int num9){
+                this.currentVal = atan(num9);
                 return this.currentVal;
 
         }
