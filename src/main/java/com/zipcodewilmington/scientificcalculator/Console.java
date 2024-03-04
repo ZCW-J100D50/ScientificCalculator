@@ -23,17 +23,10 @@ public class Console {
     }
 
     public static Integer getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        int userInput = scanner.nextInt();
-        return userInput;
+        return null;
     }
 
     public static Double getDoubleInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        Double userInput = scanner.nextDouble();
-        return userInput;
-
+        return null;
     }
 }
