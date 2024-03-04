@@ -7,6 +7,11 @@ import java.util.Scanner;
  */
 public class Console {
 
+    public static void defaultValue (){
+        System.out.println(SimpleCalculator.intResult);
+    }
+
+
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
@@ -22,11 +27,17 @@ public class Console {
         return userInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        return null;
+    public static Integer getIntegerInput() {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        return number;
     }
 
-    public static Double getDoubleInput(String prompt) {
-        return null;
+    public static Double getDoubleInput() {
+        Scanner scan = new Scanner(System.in);
+        double d = scan.nextDouble();
+        return d;
     }
+
+
 }
