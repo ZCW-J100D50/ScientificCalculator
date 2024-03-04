@@ -11,13 +11,14 @@ public class ScientificCalculator {
         CoreCalculations cal = new CoreCalculations();
         Trigonometry trig = new Trigonometry();
         LogarithmicFunctions log = new LogarithmicFunctions();
-
+        System.out.println("----------------------------");
         System.out.println("Welcome to my calculator!\n");
+        System.out.println("----------------------------");
 
         while (true) {
             System.out.printf("List of Operations:\n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Exponent\n 8. Inverse\n 9. Switch\n " +
                     "10. sin\n 11. cos\n 12. tan\n 13. inverseSin\n 14. inverseCos\n 15. inverseTan\n " +
-                    "16. log\n 17. log-1\n 18. ln\n 19. clear\n Type {exit} to End Program.\n\nYour current value: %2.1f\n\nPlease Choose an Operation:\n", displayNum);
+                    "16. log\n 17. log-1\n 18. ln\n 19. factorial\n 20. clear\n Type {exit} to End Program.\n\nYour current value: %2.1f\n\nPlease Choose an Operation:\n", displayNum);
             calculation = scanner.next();
 
             if (calculation.equalsIgnoreCase("exit")) {
@@ -110,6 +111,9 @@ public class ScientificCalculator {
                     displayNum = log.calculateNaturalLog(displayNum, base);
                     break;
                 case "19":
+                    displayNum = log.factorial(displayNum);
+                    break;
+                case "20":
                     displayNum = 0;
                     break;
                 default :
