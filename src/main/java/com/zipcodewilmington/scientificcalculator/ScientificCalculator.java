@@ -1,7 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
-
 public class ScientificCalculator {
 
     public static double displayNum = 0;
@@ -9,11 +8,16 @@ public class ScientificCalculator {
 
         String calculation;
         Scanner scanner = new Scanner(System.in);
+        CoreCalculations cal = new CoreCalculations();
+        Trigonometry trig = new Trigonometry();
+        LogarithmicFunctions log = new LogarithmicFunctions();
 
         System.out.println("Welcome to my calculator!\n");
 
         while (true) {
-            System.out.printf("List of Operations:\n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Exponent\n 8. Inverse\n 9. Switch\n 10. clear\n Type {exit} to End Program.\n\nYour current value: %2.1f\n\nPlease Choose an Operation:\n", displayNum);
+            System.out.printf("List of Operations:\n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Exponent\n 8. Inverse\n 9. Switch\n " +
+                    "10. sin\n 11. cos\n 12. tan\n 13. inverseSin\n 14. inverseCos\n 15. inverseTan\n " +
+                    "16. log\n 17. log-1\n 18. ln\n 19. clear\n Type {exit} to End Program.\n\nYour current value: %2.1f\n\nPlease Choose an Operation:\n", displayNum);
             calculation = scanner.next();
 
             if (calculation.equalsIgnoreCase("exit")) {
@@ -23,145 +27,95 @@ public class ScientificCalculator {
             switch (calculation) {
                 case "1":
                     System.out.println("Enter Number: ");
-                    displayNum += scanner.nextDouble();
+                    displayNum = cal.addition(displayNum,scanner.nextDouble());
                     break;
 
                 case "2":
                     System.out.println("Enter Number: ");
-                    displayNum -= scanner.nextDouble();
+                    displayNum = cal.subtraction(displayNum, scanner.nextDouble());
                     break;
 
                 case "3":
                     System.out.println("Enter Number: ");
-                    displayNum *= scanner.nextDouble();
+                    displayNum = cal.multiplication(displayNum,scanner.nextDouble() );
                     break;
 
                 case "4":
                     System.out.println("Enter Number: ");
-                    double error = scanner.nextDouble();
-                    if (error != 0) {
-                        displayNum /= error;
-                    } else {
-                        System.out.println("Err: Cannot divide a number by 0.\n");
-                        displayNum = Double.NaN;
-                    }
+                    displayNum = cal.division(displayNum, scanner.nextDouble());
                     break;
 
                 case "5":
-                    displayNum = Math.pow(displayNum, 2);
+                    System.out.println("Enter Number: ");
+                    displayNum = cal.square(displayNum);
                     break;
 
                 case "6":
-
-                    if (displayNum >= 0) {
-                        displayNum = Math.sqrt(displayNum);
-                    } else{
-                        System.out.println("Err: user cannot take the square root of a negative number.");
-                        displayNum = Double.NaN;
-                    }
+                    System.out.println("Enter Number: ");
+                    displayNum = cal.squareRoot(displayNum);
                     break;
 
                 case "7":
                     System.out.println("Enter Exponent: ");
                     double exponent = scanner.nextDouble();
-                    displayNum = Math.pow(displayNum, exponent);
+                    displayNum = cal.exponent(displayNum, exponent);
                     break;
 
                 case "8":
-                    if (displayNum != 0) {
-                        displayNum = 1 / displayNum;
-                    } else {
-                        System.out.println("Err: user cannot take the inverse of 0.");
-                        displayNum = Double.NaN;
-                    }
+                    System.out.println("Enter Number: ");
+                    displayNum = cal.inverse(displayNum);
                     break;
 
                 case "9":
+                    System.out.println("Enter Number: ");
                     displayNum = -displayNum;
                     break;
 
-                case "10":
+                case "10"  :
+                    System.out.println("Enter Number: ");
+                    displayNum = trig.calculateSine(displayNum);
+                    break;
+                case "11"  :
+                    System.out.println("Enter Number: ");
+                    displayNum = trig.calculateCosine(displayNum);
+                    break;
+                case "12":
+                    System.out.println("Enter Number: ");
+                    displayNum = trig.calculateTangent(displayNum);
+                    break;
+                case "13":
+                    System.out.println("Enter Number: ");
+                    displayNum = trig.calculateInverseSine(displayNum);
+                    break;
+                case "14":
+                    System.out.println("Enter Number: ");
+                    displayNum = trig.calculateInverseCosine(displayNum);
+                    break;
+                case "15":
+                    System.out.println("Enter Number: ");
+                    displayNum = trig.calculateInverseTangent(displayNum);
+                    break;
+                case "16":
+                    System.out.println("Enter Number: ");
+                    displayNum = log.calculateLogarithmic(displayNum);
+                    break;
+                case "17":
+                    System.out.println("Enter Number: ");
+                    displayNum = log.calculateInverseLogarithm(displayNum);
+                    break;
+                case "18":
+                    System.out.println("Enter value: ");
+                    double base = scanner.nextDouble();
+                    System.out.println("Enter base: ");
+                    displayNum = log.calculateNaturalLog(displayNum, base);
+                    break;
+                case "19":
                     displayNum = 0;
                     break;
+                default :
+                    System.out.println("Invalid Selection.\n\n");
 
             }
         }
     }
 }
-
-                    /*double result;
-                    double num1, num2;*/
-
-                        /*case "1":
-                    /*System.out.println("\nYou have chosen addition!\nEnter First Number: ");
-                    num1 = scanner.nextDouble();
-                    System.out.println("Enter Second Number: ");
-                    num2 = scanner.nextDouble();
-                    result = num1 + num2;
-                    displayNum = result;
-
-                    System.out.printf("%2.0f +%2.0f = %2.0f\n\n", num1, num2, result);
-
-
-                            case "2":
-                    System.out.println("\nYou have chosen Subtraction!\nEnter First Number: ");
-                    num1 = scanner.nextDouble();
-                    System.out.println("Enter Second Number: ");
-                    num2 = scanner.nextDouble();
-                    result = num1 - num2;
-                    displayNum = result;
-
-                    System.out.printf("%2.0f - %2.0f = %2.0f\n", num1, num2, result);
-
-
-                            case "3":
-                    System.out.println("\nYou have chosen Multiplication!\nEnter First Number: ");
-                    num1 = scanner.nextDouble();
-                    System.out.println("Enter Second Number: ");
-                    num2 = scanner.nextDouble();
-                    result = num1 * num2;
-                    displayNum = result;
-
-                    System.out.printf("%2.0f * %2.0f = %2.0f\n", num1, num2, result);
-
-
-                            case "4":
-                    System.out.println("\nYou have chosen Division!\nEnter First Number: ");
-                    num1 = scanner.nextDouble();
-                    System.out.println("Enter Second Number: ");
-                    num2 = scanner.nextDouble();
-                    if(num2 == 0){
-                        System.out.println("Err: Cannot divide a number by 0.\n");
-                        continue;
-                    }
-                    result = num1 / num2;
-                    displayNum = result;
-
-                    System.out.printf("%2.0f / %2.0f = %2.0f\n", num1, num2, result);
-
-
-
-                            case "5":
-                    System.out.println("\nYou have chosen Square Root!\nEnter the Base Number: ");
-                    num1 = scanner.nextDouble();
-                    System.out.println("Enter the Exponent: ");
-                    num2 = scanner.nextDouble();
-                    result = Math.pow(num1, num2);
-                    displayNum = result;
-
-                    System.out.printf("%2.0f^%2.0f = %2.0f\n", num1, num2, result);
-
-
-
-                            case "6":
-                    System.out.println("\nYou have chosen Square Root!\nEnter First Number: ");
-                    num1 = scanner.nextDouble();
-                    if(num1 < 0){
-                        System.out.println("Err: user cannot take the square root of a negative number.\n");
-                        continue;
-                    }
-                    result = Math.sqrt(num1);
-                    displayNum = result;
-
-                    System.out.printf("%2.0f = %2.0f\n", num1, result);*/
-
