@@ -1,10 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class Calculator {
-<<<<<<< HEAD
-=======
 
->>>>>>> ChrisBranch
     private double currentValue;
 
     public Calculator() {
@@ -30,17 +27,14 @@ public class Calculator {
         return this.currentValue;
     }
     public double divide(double num){
-<<<<<<< HEAD
+
         if(num == 0){
             Console.println("ERR");
         }
         else {this.currentValue = currentValue / num;}
         return this.currentValue;
-
-=======
         this.currentValue = currentValue / num;
         return this.currentValue;
->>>>>>> ChrisBranch
     }
     public double squareRoot(){
         this.currentValue = Math.sqrt(this.currentValue);
@@ -62,9 +56,3 @@ public class Calculator {
         this.currentValue = -currentValue;
         return this.currentValue;
     }
-<<<<<<< HEAD
-
-}
-=======
-}
->>>>>>> ChrisBranch
